@@ -15,4 +15,12 @@ public interface UserMapper {
     Integer addUser(User user);
 
     List<User> listUsers();
+
+    /**
+     * 修改User
+     *
+     * @param user
+     * @return
+     */
+    boolean updateUser(User user);
 }

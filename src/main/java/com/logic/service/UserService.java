@@ -13,4 +13,13 @@ public interface UserService {
    Integer addUser(User user);
 
    List<User> listUsers();
+
+   /**
+    * 修改User
+    *
+    * @return
+    */
+   boolean modifyUser(int sleep, String password) throws InterruptedException;
+
+   boolean modifyUser12(int sleep, String password) throws InterruptedException;
 }

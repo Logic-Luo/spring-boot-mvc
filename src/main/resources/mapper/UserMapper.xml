@@ -4,12 +4,21 @@
 <mapper namespace="com.logic.mapper.UserMapper">
     <insert id="addUser" parameterType="com.logic.model.User" useGeneratedKeys="true">
         INSERT INTO user
-            (username, password)
-        VALUE
+        (username, password)
+            VALUE
             (#{username}, #{password})
     </insert>
 
     <select id="listUsers" resultType="User">
-        SELECT * FROM user;
+        SELECT *
+        FROM user;
     </select>
+    <update id="updateUser" parameterType="com.logic.model.User">
+        UPDATE user
+        SET
+            username = #{username},
+            password = #{password}
+        WHERE
+            id = #{id}
+    </update>
 </mapper>
